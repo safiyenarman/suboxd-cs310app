@@ -24,6 +24,7 @@ The aim of this project is to build a *student centered course review platform* 
 This application will help students make informed and confident course selections by combining *authentic peer insights* with *interactive, social features*.
 
 Each course will have a dedicated page including details such as:
+
 •⁠  ⁠Instructor name  
 •⁠  ⁠Semester and credits  
 •⁠  ⁠Course difficulty and workload level  
@@ -37,6 +38,7 @@ This offers a *realistic perspective beyond the syllabus*.
 The platform reimagines academic feedback as a *social experience* inspired by Letterboxd.  
 
 Students can:
+
 •⁠  ⁠Log and review their completed or ongoing courses  
 •⁠  ⁠Follow friends to explore their experiences  
 •⁠  ⁠Discover trending and highly-rated classes  
@@ -54,12 +56,14 @@ The system aims to make academic experiences *shareable, **searchable, and more 
 
 #### 1. User Profiles
 Each user will have a personalized profile where they can:
+
 •⁠  ⁠Add the courses they have taken or are currently taking  
 •⁠  ⁠View their course list in a visual, timeline-like interface  
 •⁠  ⁠Follow other students to see what classes they have taken and reviewed  
 
 #### 2. Course Pages
 Every course will have a dedicated page, similar to a movie page on Letterboxd:
+
 •⁠  ⁠Course information: course code, instructor name, semester, credits  
 •⁠  ⁠Average rating: displayed as stars and numerical scores (1–5)  
 •⁠  ⁠Reviews: user-submitted text reviews  
@@ -67,6 +71,7 @@ Every course will have a dedicated page, similar to a movie page on Letterboxd:
 
 #### 3. Review System
 Users can:
+
 •⁠  ⁠Write short or detailed reviews about courses  
 •⁠  ⁠Rate courses based on difficulty, workload, etc.  
 •⁠  ⁠Edit or delete their own reviews  
