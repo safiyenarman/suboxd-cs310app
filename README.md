@@ -1,5 +1,16 @@
 # SUBOXD
 
+## Team Members
+
+| Student ID | Name                |
+|-------------|--------------------|
+| 32160       | Pırıl Deniz Zorlutuna |
+| 32523       | Sena Toker         |
+| 32190       | Rabia Örsün        |
+| 33770       | Rana Keleş         |
+| 32411       | Safiye Narman      |
+
+
 ## Table of Contents
 •⁠  ⁠[Introduction](#introduction)
 •⁠  ⁠[Aim](#aim)
