@@ -109,7 +109,7 @@ To enhance engagement:
 4.⁠ ⁠Reviews appear publicly on the course page and in followers’ feeds  
 5.⁠ ⁠Other users interact (like, comment, follow)  
 
-This flow ensures the app feels *social, **informative, and **interactive, while helping students make **better-informed course decisions*.
+This flow ensures the app feels social, informative, and interactive, while helping students make better informed course decisions*.
 
 ---
 
