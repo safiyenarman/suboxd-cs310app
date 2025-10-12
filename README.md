@@ -1,4 +1,4 @@
-# SUBOXD
+# SUBoxd
 
 ## Team Members
 
