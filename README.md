@@ -60,8 +60,8 @@ By promoting *knowledge sharing* and *community interaction*, the platform trans
 ---
 
 ## System Design
-Our application is designed as a *social academic platform* where university students can log, rate, and review the courses they have taken, inspired by the concept of Letterboxd, a social platform for reviewing movies.  
-The system aims to make academic experiences *shareable, **searchable, and more **engaging* through a user-friendly interface.
+Our application is designed as a *social academic platform* where university students can log, rate, and review the courses they have taken.  
+The system aims to make academic experiences shareable, searchable, and more engaging through a user-friendly interface.
 
 ### Core Components
 
