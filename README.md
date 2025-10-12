@@ -79,12 +79,14 @@ Users can:
 
 #### 4. Course Discovery
 An explore page allows users to:
+
 •⁠  ⁠Search courses by name or instructor  
 •⁠  ⁠Sort courses by popularity, difficulty, or rating  
 •⁠  ⁠View recommended courses based on similar departments  
 
 #### 5. Social Interaction Features
 To enhance engagement:
+
 •⁠  ⁠Users can follow friends or classmates  
 •⁠  ⁠A feed will show recent reviews from followed users  
 •⁠  ⁠“Like” or “Save” features allow users to favorite reviews or courses  
@@ -105,6 +107,7 @@ This platform aims to make *course selection at Sabancı University easier, more
 By centralizing authentic student insights, it replaces fragmented communication channels such as WhatsApp groups with a reliable academic feedback network.
 
 Ultimately, the project:
+
 •⁠  ⁠Encourages informed decision-making  
 •⁠  ⁠Promotes trust and transparency  
 •⁠  ⁠Fosters a stronger, supportive academic community
