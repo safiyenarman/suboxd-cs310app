@@ -78,7 +78,7 @@ Every course will have a dedicated page, similar to a movie page on Letterboxd:
 •⁠  ⁠Course information: course code, instructor name, semester, credits  
 •⁠  ⁠Average rating: displayed as stars and numerical scores (1–5)  
 •⁠  ⁠Reviews: user-submitted text reviews  
-•⁠  ⁠Tags: e.g., Project-based, Highly recommended, etc.  
+•⁠  ⁠Tags: Project-based, Highly recommended, etc.  
 
 #### 3. Review System
 Users can:
