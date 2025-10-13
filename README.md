@@ -100,7 +100,7 @@ To enhance engagement:
 
 •⁠  ⁠Users can follow friends or classmates  
 •⁠  ⁠A feed will show recent reviews from followed users  
-•⁠  ⁠“Like” or “Save” features allow users to favorite reviews or courses  
+•⁠  ⁠Like or save features allow users to favorite reviews or courses  
 
 ### System Flow
 1.⁠ ⁠User signs up or logs in  
