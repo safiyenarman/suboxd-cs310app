@@ -21,18 +21,18 @@
 ---
 
 ## Introduction
-Choosing the right courses at Sabancı University often involves uncertainty. While flexibility in course selection is valuable, official course descriptions rarely reflect the *real student experience* such as instructor style, workload, and overall satisfaction.
+Choosing the right courses at Sabancı University often involves uncertainty. While flexibility in course selection is valuable, official course descriptions rarely reflect the real student experience such as instructor style, workload, and overall satisfaction.
 
 Inspired by Letterboxd, a popular platform for reviewing movies, our project brings a similar concept to the academic world.  
-We are developing a *mobile application* that allows students to *rate, review, and share feedback* on courses and instructors in one centralized, community driven space.  
+We are developing a mobile application that allows students to rate, review, and share feedback on courses and instructors in one centralized, community driven space.  
 
-The goal is to make course selection *transparent, informed, and social* turning academic feedback into a shared, engaging experience.
+The goal is to make course selection transparent, informed, and social turning academic feedback into a shared, engaging experience.
 
 ---
 
 ## Aim
-The aim of this project is to build a *student centered course review platform* for Sabancı University.  
-This application will help students make informed and confident course selections by combining *authentic peer insights* with *interactive, social features*.
+The aim of this project is to build a student centered course review platform for Sabancı University.  
+This application will help students make informed and confident course selections by combining authentic peer insights with interactive, social features.
 
 Each course will have a dedicated page including details such as:
 
@@ -41,12 +41,12 @@ Each course will have a dedicated page including details such as:
 •⁠  ⁠Course difficulty and workload level  
 •⁠  ⁠Ratings and reviews from students  
 
-This offers a *realistic perspective beyond the syllabus*.
+This offers a realistic perspective beyond the syllabus.
 
 ---
 
 ## Description
-The platform reimagines academic feedback as a *social experience* inspired by Letterboxd.  
+The platform reimagines academic feedback as a social experience inspired by Letterboxd.  
 
 Students can:
 
@@ -55,12 +55,12 @@ Students can:
 •⁠  ⁠Discover trending and highly-rated classes  
 •⁠  ⁠Build a personal “course diary” documenting their academic journey  
 
-By promoting *knowledge sharing* and *community interaction*, the platform transforms course selection into a more enjoyable and collaborative process.
+By promoting knowledge sharing and community interaction, the platform transforms course selection into a more enjoyable and collaborative process.
 
 ---
 
 ## System Design
-Our application is designed as a *social academic platform* where university students can log, rate, and review the courses they have taken.  
+Our application is designed as a social academic platform where university students can log, rate, and review the courses they have taken.  
 The system aims to make academic experiences shareable, searchable, and more engaging through a user-friendly interface.
 
 ### Core Components
@@ -114,7 +114,7 @@ This flow ensures the app feels social, informative, and interactive, while help
 ---
 
 ## Expected Outcome
-This platform aims to make *course selection at Sabancı University easier, more transparent, and less stressful*.  
+This platform aims to make course selection at Sabancı University easier, more transparent, and less stressful.  
 By centralizing authentic student insights, it replaces fragmented communication channels such as WhatsApp groups with a reliable academic feedback network.
 
 Ultimately, the project:
