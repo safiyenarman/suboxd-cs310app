@@ -120,9 +120,9 @@ By centralizing authentic student insights, it replaces fragmented communication
 
 Ultimately, the project:
 
-•⁠  ⁠Encourages informed decision-making  
+**•⁠  ⁠Encourages informed decision-making  
 •⁠  ⁠Promotes trust and transparency  
-•⁠  ⁠Fosters a stronger, supportive academic community
+•⁠  ⁠Fosters a stronger, supportive academic community**
 =======
 # suboxd_cs310app
 
