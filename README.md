@@ -119,10 +119,10 @@ This platform aims to make course selection at Sabancı University easier, more 
 By centralizing authentic student insights, it replaces fragmented communication channels such as WhatsApp groups with a reliable academic feedback network.
 
 Ultimately, the project:
+•⁠  Encourages informed decision making
+•⁠  Promotes trust and transparency
+•⁠  Fosters a stronger, supportive academic communit
 
-**•⁠  ⁠Encourages informed decision-making  
-•⁠  ⁠Promotes trust and transparency  
-•⁠  ⁠Fosters a stronger, supportive academic community**
 =======
 # suboxd_cs310app
 
