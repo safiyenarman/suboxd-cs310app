@@ -3,18 +3,13 @@
 
 ---
 
-## Introduction
+## Description
 Choosing the right courses at Sabancı University often involves uncertainty. While flexibility in course selection is valuable, official course descriptions rarely reflect the real student experience such as instructor style, workload, and overall satisfaction.
 
 Inspired by Letterboxd, a popular platform for reviewing movies, our project brings a similar concept to the academic world.  
 We are developing a mobile application that allows students to rate, review, and share feedback on courses and instructors in one centralized, community driven space.  
 
 The goal is to make course selection transparent, informed, and social turning academic feedback into a shared, engaging experience.
-
----
-
-## Description
-The platform reimagines academic feedback as a social experience inspired by Letterboxd.  
 
 Students can:
 
