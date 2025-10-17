@@ -123,7 +123,8 @@ Ultimately, the project:
 •⁠  Promotes trust and transparency
 •⁠  Fosters a stronger, supportive academic communit
 
-=======
+---
+
 # suboxd_cs310app
 
 A new Flutter project.
