@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 import 'all_courses_screen.dart';
 import 'friends_activity_screen.dart';
 import 'search_screen.dart';
-import 'profile_screen.dart'; // Rota adı için gerekli
-import '../routes.dart'; // Rota sabitleri için gerekli
-import 'course_planner_screen.dart'; // Rotayı kullanmak için import edildi
+import 'profile_screen.dart'; 
+import '../routes.dart'; 
+import 'course_planner_screen.dart'; 
 
-// Diğer ekranlarla uyumlu renk sabitleri
+
 const Color primaryColor = Color(0xFF4B8BF4);
 const Color bottomBarColor = Color(0xFF485365);
 const Color tabSelected = Color(0xFF4B8BF4);
@@ -18,7 +18,7 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     const backgroundColor = Color(0xFF1C2128);
 
-    // 1. Asset yolları güncellendi
+    
     const popularThisTermImages = [
       'assets/acc201.png',
       'assets/cs204.png',
@@ -26,7 +26,7 @@ class HomeScreen extends StatelessWidget {
       'assets/cs411.png',
     ];
 
-    // 1. Asset yolları güncellendi
+   
     const popularWithFriendsImages = [
       'assets/ns102.png',
       'assets/acc201.png',
@@ -35,59 +35,44 @@ class HomeScreen extends StatelessWidget {
     ];
 
     final bottomNavBar = BottomNavigationBar(
-      // Renk sabitlerinin tanımlı olduğundan emin olun.
       backgroundColor: bottomBarColor,
       type: BottomNavigationBarType.fixed,
-      currentIndex: 0, // Home (Index 0) seçili
+      currentIndex: 0, 
       selectedItemColor: primaryColor,
       unselectedItemColor: Colors.grey,
       items: const [
-        // Index 0: Home
         BottomNavigationBarItem(icon: Icon(Icons.home_outlined), label: ''),
-        // Index 1: Search
         BottomNavigationBarItem(icon: Icon(Icons.search), label: ''),
-        // Index 2: Add (Review Ekleme)
         BottomNavigationBarItem(
           icon: Icon(Icons.add_circle, color: Colors.greenAccent),
           label: '',
         ),
-        // Index 3: Friends Activity
         BottomNavigationBarItem(icon: Icon(Icons.flash_on_outlined), label: ''),
-        // Index 4: Profile
         BottomNavigationBarItem(icon: Icon(Icons.person_outline), label: ''),
       ],
 
       onTap: (index) {
-        // Alt Bar Navigasyonları
         switch (index) {
           case 0:
-          // Home ekranına git
-          // Zaten Home ekranında olsanız bile, bu yöntem stack'i temizler.
             Navigator.pushNamedAndRemoveUntil(
                 context, Routes.home, (route) => false);
             break;
 
           case 1:
-          // Search ekranına git
             Navigator.pushNamedAndRemoveUntil(
                 context, Routes.search, (route) => false);
             break;
 
           case 2:
-          // ⭐️ ADD REVIEW (EKLE) EKRANINA GİT
-          // Bu bir form/modal olduğu için stack'i temizlemiyoruz (pushNamed yeterli).
-          // Böylece formdan geri tuşuyla Home ekranına dönebiliriz.
             Navigator.pushNamed(context, Routes.addReview);
             break;
 
           case 3:
-          // Friends Activity ekranına git
             Navigator.pushNamedAndRemoveUntil(
                 context, Routes.friendsActivity, (route) => false);
             break;
 
           case 4:
-          // Profile ekranına git
             Navigator.pushNamedAndRemoveUntil(
                 context, ProfileScreen.routeName, (route) => false);
             break;
@@ -98,10 +83,8 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: backgroundColor,
 
-      // BOTTOM NAV
       bottomNavigationBar: bottomNavBar,
 
-      // TOP BAR
       appBar: AppBar(
         backgroundColor: Colors.black,
         elevation: 0,
@@ -128,22 +111,18 @@ class HomeScreen extends StatelessWidget {
               ),
               child: Row(
                 children: [
-                  // Profile (Seçili değil, basınca ProfileScreen'e gidecek)
                   _TabItem(
                     label: "Profile",
-                    selected: false, // 2. Artık seçili değil
+                    selected: false, 
                     onTap: () {
-                      // 2. Profile ekranına yönlendirme
                       Navigator.pushNamed(context, ProfileScreen.routeName);
                     },
                   ),
                   const _TabDivider(),
-                  // Courses
                   _TabItem(
                     label: "Courses",
-                    selected: false, // 2. Artık seçili değil
+                    selected: false, 
                     onTap: () {
-                      // 🔹 COURSES TAB → CoursesGridScreen
                       Navigator.push(
                         context,
                         MaterialPageRoute(
@@ -153,22 +132,18 @@ class HomeScreen extends StatelessWidget {
                     },
                   ),
                   const _TabDivider(),
-                  // Reviews
                    _TabItem(
                     label: "Reviews",
-                    selected: false, // 2. Artık seçili değil
+                    selected: false, 
                      onTap: () {
-                       // 2. Plan to Take (Course Planner) ekranına yönlendirme
                        Navigator.pushNamed(context, Routes.reviews);
                      },
                   ),
                   const _TabDivider(),
-                  // Plan to Take
                   _TabItem(
                     label: "Plan to Take",
-                    selected: false, // 2. Artık seçili değil
+                    selected: false, 
                     onTap: () {
-                      // 2. Plan to Take (Course Planner) ekranına yönlendirme
                       Navigator.pushNamed(context, Routes.coursePlanner);
                     },
                   ),
@@ -179,11 +154,9 @@ class HomeScreen extends StatelessWidget {
         ),
       ),
 
-      // BODY
       body: ListView(
         padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
         children: [
-          // POPULAR THIS TERM
           const _SectionHeader(title: 'Popular this term'),
           const SizedBox(height: 8),
           SizedBox(
@@ -201,11 +174,9 @@ class HomeScreen extends StatelessWidget {
           ),
           const SizedBox(height: 24),
 
-          // NEW FROM FRIENDS → TIKLANINCA FRIENDS ACTIVITY
           _SectionHeader(
             title: 'New from friends',
             onTap: () {
-              // 🔹 NEW FROM FRIENDS HEADER → FriendsActivityScreen
               Navigator.push(
                 context,
                 MaterialPageRoute(
@@ -223,14 +194,14 @@ class HomeScreen extends StatelessWidget {
                 _FriendCourseCard(
                   width: 90,
                   height: 120,
-                  imagePath: 'assets/hum201.png', // 1. Asset yolu düzeltildi
+                  imagePath: 'assets/hum201.png', 
                   username: 'ranakeles',
                 ),
                 SizedBox(width: 12),
                 _FriendCourseCard(
                   width: 90,
                   height: 120,
-                  imagePath: 'assets/math306.png', // 1. Asset yolu düzeltildi
+                  imagePath: 'assets/math306.png', 
                   username: 'pirildeniz',
                 ),
               ],
@@ -239,7 +210,6 @@ class HomeScreen extends StatelessWidget {
 
           const SizedBox(height: 24),
 
-          // POPULAR WITH FRIENDS
           const _SectionHeader(title: 'Popular with friends'),
           const SizedBox(height: 8),
           SizedBox(
@@ -261,7 +231,6 @@ class HomeScreen extends StatelessWidget {
   }
 }
 
-// ---- TOP TAB COMPONENTS ---- //
 
 class _TabItem extends StatelessWidget {
   final String label;
@@ -286,7 +255,7 @@ class _TabItem extends StatelessWidget {
             color: tabSelected,
             borderRadius: BorderRadius.circular(14),
           )
-              : null, // selected false iken arka plan renkli olmayacak
+              : null, 
           padding: const EdgeInsets.symmetric(horizontal: 2, vertical: 4),
           child: FittedBox(
             fit: BoxFit.scaleDown,
@@ -296,7 +265,6 @@ class _TabItem extends StatelessWidget {
               style: TextStyle(
                 fontSize: 13,
                 fontWeight: selected ? FontWeight.w700 : FontWeight.w500,
-                // selected false iken Colors.white70 olacak
                 color: selected ? Colors.white : Colors.white70,
               ),
             ),
@@ -315,12 +283,11 @@ class _TabDivider extends StatelessWidget {
     return Container(
       width: 1,
       height: 18,
-      color: const Color(0xFF303542), // Divider rengi diğer ekranlara uyarlandı
+      color: const Color(0xFF303542),
     );
   }
 }
 
-// ---- SECTION HEADER (TIKLANABİLİR) ---- //
 
 class _SectionHeader extends StatelessWidget {
   final String title;
@@ -363,7 +330,6 @@ class _SectionHeader extends StatelessWidget {
   }
 }
 
-// ---- KARTLAR ---- //
 
 class _CourseCard extends StatelessWidget {
   final double width, height;
@@ -404,11 +370,10 @@ class _FriendCourseCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: width, // 90
+      width: width, 
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          // course görseli
           ClipRRect(
             borderRadius: BorderRadius.circular(14),
             child: Image.asset(
