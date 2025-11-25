@@ -40,7 +40,6 @@ class SplashScreen extends StatelessWidget {
 
             const SizedBox(height: 32),
 
-            // 🔹 Artık const değil, çünkü onTap veriyoruz
             Column(
               children: [
                 _SplashButton(
