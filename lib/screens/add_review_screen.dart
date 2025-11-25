@@ -14,7 +14,7 @@ const List<CourseMeta> _courses = [
   CourseMeta('CS303', 'Logic & Digital System Design', 'assets/images/cs303.png'),
   CourseMeta('HUM201', 'Major Works of Literature', 'assets/images/hum201.png'),
   CourseMeta('PSY201', 'Psychology', 'assets/images/psy201.png'),
-  // ... Diğer kurslarınız ...
+  
 ];
 
 
