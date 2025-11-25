@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-// CourseMeta yapısı, Reviews ekranından alınmıştır.
+
 class CourseMeta {
   final String code;
   final String name;
@@ -8,7 +8,7 @@ class CourseMeta {
   const CourseMeta(this.code, this.name, this.imageAsset);
 }
 
-// Kurs listesi (örnek veriler)
+
 const List<CourseMeta> _courses = [
   CourseMeta('ACC201', 'ACC 201', 'assets/images/acc201.png'),
   CourseMeta('CS303', 'Logic & Digital System Design', 'assets/images/cs303.png'),
@@ -19,7 +19,7 @@ const List<CourseMeta> _courses = [
 
 
 class AddReviewScreen extends StatefulWidget {
-  // Yeni rota adı sabiti eklendi.
+  
   static const routeName = '/add-review';
 
   const AddReviewScreen({super.key});
@@ -47,13 +47,13 @@ class _AddReviewScreenState extends State<AddReviewScreen> {
       return;
     }
 
-    // Yorumu gönderme mantığı buraya eklenecek.
-    print('Yorum Gönderildi:');
+   
+    print('Comment sended');
     print('Kurs: ${_selectedCourse!.code}');
     print('Puan: $_selectedStars');
     print('Yorum Metni: ${_reviewController.text}');
 
-    // İşlem başarılı ise bir önceki ekrana dön.
+    
     Navigator.pop(context);
   }
 
@@ -62,14 +62,13 @@ class _AddReviewScreenState extends State<AddReviewScreen> {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Add Review'),
-        backgroundColor: const Color(0xFF15181E), // AppBar rengi
+        backgroundColor: const Color(0xFF15181E), 
 
-        // ⭐️ GÜNCELLEME: Çarpı (Kapat) butonu eklendi.
-        // Bu, önceki ekrana geri dönmeyi garanti eder.
+        .
         leading: IconButton(
           icon: const Icon(Icons.close, color: Colors.white),
           onPressed: () {
-            // Bir önceki rotaya geri döner.
+            
             Navigator.pop(context);
           },
         ),
@@ -79,7 +78,7 @@ class _AddReviewScreenState extends State<AddReviewScreen> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            // 1. KURS SEÇİM ALANI (DROPDOWN)
+            
             const Text(
               'Select Course',
               style: TextStyle(color: Colors.white, fontSize: 16),
@@ -117,7 +116,7 @@ class _AddReviewScreenState extends State<AddReviewScreen> {
             ),
             const SizedBox(height: 24),
 
-            // 2. YORUM METİN ALANI
+            //  YORUM METİN ALANI
             const Text(
               'Your Review',
               style: TextStyle(color: Colors.white, fontSize: 16),
@@ -140,7 +139,7 @@ class _AddReviewScreenState extends State<AddReviewScreen> {
             ),
             const SizedBox(height: 24),
 
-            // 3. YILDIZ PUANLAMA
+            
             const Text(
               'Rating',
               style: TextStyle(color: Colors.white, fontSize: 16),
@@ -169,7 +168,7 @@ class _AddReviewScreenState extends State<AddReviewScreen> {
             const SizedBox(height: 40),
 
 
-            // GÖNDER BUTONU
+            
             Align(
               alignment: Alignment.centerRight,
               child: ElevatedButton(
