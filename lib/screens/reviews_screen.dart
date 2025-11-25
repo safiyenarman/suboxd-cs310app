@@ -1,26 +1,25 @@
 import 'package:flutter/material.dart';
-// ⭐️ Eklenen Importlar (Routes ve diğer ekranlar için)
+
 import '../routes.dart';
 import 'profile_screen.dart';
-// Yeni Ekranlar (Önceki bağlamdan varsayılan rotalar)
-import 'settings_screen.dart'; // Settings'e gitmek için eklendi
+
+import 'settings_screen.dart'; 
 import 'home_screen.dart';
 import 'search_screen.dart';
 import 'friends_activity_screen.dart';
 
 
-// ================== SABİT RENK TANIMLARI ==================
-// Diğer ekranlarınızdan alınan renkler
+
 const Color primaryColor = Color(0xFF4B8BF4);
 const Color tabSelected = primaryColor;
-const Color bg = Color(0xFF1E2229); // Genel arka plan rengi
+const Color bg = Color(0xFF1E2229); 
 const Color appBarColor = Colors.black; // AppBar arka planı
 const Color bottomBarColor = Color(0xFF485365); // Alt bar arka planı
-const Color dividerColor = Color(0xFF303542); // Bölücü rengi
+const Color dividerColor = Color(0xFF303542); 
 const Color starColor = Color(0xFFF7C300);
 
 
-// ================== DATA MODELLERİ (DEĞİŞMEDİ) ==================
+
 
 class ReviewData {
   final String courseCode;
@@ -66,7 +65,7 @@ const List<CourseMeta> _courses = [
 ];
 
 
-// ================== REVIEWS SCREEN ==================
+
 
 class ReviewsScreen extends StatefulWidget {
   // ⭐️ Yeni Route Adı (Routes sınıfına eklenmeli)
@@ -146,7 +145,7 @@ class _ReviewsScreenState extends State<ReviewsScreen> {
   // Alt navigasyonun güncel index'i (Reviews: 2)
   int _currentIndex = 2;
 
-  // Alt Navigasyon Çubuğu'nun (BottomNavigationBar) yönetimi
+  
   void _onBottomNavItemTapped(int index) {
     if (_currentIndex == index) return;
 
@@ -177,7 +176,7 @@ class _ReviewsScreenState extends State<ReviewsScreen> {
         return;
     }
 
-    // Index 2 dışındaki tüm navigasyonlar için stack'i temizle ve yeni route'a git
+    
     Navigator.pushNamedAndRemoveUntil(context, targetRoute, (route) => false);
   }
 
@@ -186,7 +185,7 @@ class _ReviewsScreenState extends State<ReviewsScreen> {
     return Scaffold(
       backgroundColor: bg, // Sabit renk kullanıldı
 
-      // ================== APP BAR (ProfileScreen benzeri) ==================
+     
       appBar: AppBar(
         backgroundColor: appBarColor, // Sabit renk kullanıldı
         elevation: 0,
@@ -209,7 +208,7 @@ class _ReviewsScreenState extends State<ReviewsScreen> {
         ),
         toolbarHeight: 56, // ProfileScreen ile aynı yükseklik
 
-        // ACTIONS: ADD REVIEW ve Friends Activity için PopupMenuButton (ProfileScreen'deki gibi)
+        
         actions: [
           PopupMenuButton<String>(
             color: bottomBarColor, // Menü arka plan rengi
@@ -235,7 +234,7 @@ class _ReviewsScreenState extends State<ReviewsScreen> {
           ),
         ],
 
-        // Üst Segmentli Sekmeler (Bottom PreferredSize içine alındı)
+       
         bottom: PreferredSize(
           preferredSize: const Size.fromHeight(48), // Sekme yüksekliği
           child: Container(
@@ -297,7 +296,7 @@ class _ReviewsScreenState extends State<ReviewsScreen> {
         ],
       ),
 
-      // ================== BOTTOM NAV BAR (ProfileScreen benzeri) ==================
+      
       bottomNavigationBar: BottomNavigationBar(
         backgroundColor: bottomBarColor,
         type: BottomNavigationBarType.fixed,
@@ -324,7 +323,7 @@ class _ReviewsScreenState extends State<ReviewsScreen> {
     );
   }
 
-  // --- _tabItem Metodu (stil uyumu için) ---
+  
 
   Widget _tabItem(String label, bool active, VoidCallback? onTap) {
     return GestureDetector(
@@ -347,7 +346,7 @@ class _ReviewsScreenState extends State<ReviewsScreen> {
     );
   }
 
-  // --- _buildReviewCard Metodu (değişmedi) ---
+  
 
   Widget _buildReviewCard(BuildContext context, ReviewData r) {
     // ... (metot içeriği olduğu gibi kalır)
@@ -789,4 +788,5 @@ class _AddReviewScreenState extends State<AddReviewScreen> {
       ),
     );
   }
+
 }
