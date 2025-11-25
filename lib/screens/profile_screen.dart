@@ -16,7 +16,6 @@ class ProfileScreen extends StatelessWidget {
     const bg = Color(0xFF1E2229);
     const cardColor = Color(0xFF262B33);
     const dividerColor = Color(0xFF303542);
-    // ProfileScreen'de kullanılan sabit renkler
     const primaryColor = Color(0xFF4B8BF4);
     const tabSelected = primaryColor;
     const bottomBarColor = Color(0xFF485365);
@@ -25,7 +24,6 @@ class ProfileScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: bg,
 
-      // ================== APP BAR (segmented tab bar) ==================
       appBar: AppBar(
         backgroundColor: Colors.black,
         elevation: 0,
@@ -58,16 +56,14 @@ class ProfileScreen extends StatelessWidget {
               ),
               child: Row(
                 children: [
-                  // Profile (Şu anki ekran - Seçili)
                   const Expanded(
                     child: _TabItem(
                       label: "Profile",
-                      selected: true, // Profile seçili olduğu için mavi
+                      selected: true, 
                     ),
                   ),
                   const _TabDivider(),
 
-                  // Courses
                   Expanded(
                     child: GestureDetector(
                       onTap: () {
@@ -78,7 +74,6 @@ class ProfileScreen extends StatelessWidget {
                   ),
                   const _TabDivider(),
 
-                  // Reviews
                   Expanded(
                     child: GestureDetector(
                       onTap: () { //
@@ -89,7 +84,6 @@ class ProfileScreen extends StatelessWidget {
                   ),
                   const _TabDivider(),
 
-                  // Plan to Take
                   Expanded(
                     child: GestureDetector(
                       onTap: () {
@@ -105,36 +99,29 @@ class ProfileScreen extends StatelessWidget {
         ),
       ),
 
-      // ================== BOTTOM NAV BAR (Navigasyonlar Güncellendi) ==================
       bottomNavigationBar: BottomNavigationBar(
         backgroundColor: bottomBarColor,
         type: BottomNavigationBarType.fixed,
-        // Profile seçili olduğu için Index 4 aktif olmalı.
         currentIndex: 4,
         selectedItemColor: primaryColor,
         unselectedItemColor: Colors.grey,
         items: const [
-          // Index 0: HOME
           BottomNavigationBarItem(
             icon: Icon(Icons.home_outlined),
             label: '',
           ),
-          // Index 1: SEARCH
           BottomNavigationBarItem(
             icon: Icon(Icons.search),
             label: '',
           ),
-          // Index 2: ADD İKONU
           BottomNavigationBarItem(
             icon: Icon(Icons.add_circle, color: Colors.greenAccent),
             label: '',
           ),
-          // Index 3: FLASH/FRIENDS ACTIVITY İKONU
           BottomNavigationBarItem(
             icon: Icon(Icons.flash_on_outlined),
             label: '',
           ),
-          // Index 4: PROFILE İKONU (Seçili)
           BottomNavigationBarItem(
             icon: Icon(Icons.person_outline),
             label: '',
@@ -142,14 +129,11 @@ class ProfileScreen extends StatelessWidget {
         ],
 
         onTap: (index) {
-          // Alt Bar Navigasyonları güncellendi
           switch (index) {
             case 0:
-            // Home sayfasına git ve geri yığınını temizle
               Navigator.pushNamedAndRemoveUntil(context, Routes.home, (route) => false);
               break;
             case 1:
-            // Search ekranına git ve geri yığınını temizle
               Navigator.pushNamedAndRemoveUntil(context, Routes.search, (route) => false);
               break;
             case 2:
@@ -157,24 +141,19 @@ class ProfileScreen extends StatelessWidget {
               break;
               break;
             case 3:
-            // Friends Activity ekranına git (Flash ikonu) ve geri yığınını temizle
               Navigator.pushNamedAndRemoveUntil(context, Routes.friendsActivity, (route) => false);
               break;
             case 4:
-            // Profile zaten burası
               break;
             default:
-            // Index 2 (Add) için bir şey yapılmadı
               break;
           }
         },
       ),
-      // ================== BODY ==================
       body: SafeArea(
         child: ListView(
           padding: const EdgeInsets.all(16),
           children: [
-            // --------- Avatar + RECENT ACTIVITY kartı ----------
             Container(
               padding: const EdgeInsets.all(16),
               decoration: BoxDecoration(
@@ -225,7 +204,6 @@ class ProfileScreen extends StatelessWidget {
             ),
             const SizedBox(height: 16),
 
-            // --------- "More activity" iki çizgi arasında ----------
             Column(
               children: [
                 const Divider(color: dividerColor, height: 1),
@@ -255,7 +233,6 @@ class ProfileScreen extends StatelessWidget {
             ),
             const SizedBox(height: 8),
 
-            // --------- Histogram + rating ----------
             Container(
               padding: const EdgeInsets.all(16),
               decoration: BoxDecoration(
@@ -275,7 +252,6 @@ class ProfileScreen extends StatelessWidget {
             ),
             const SizedBox(height: 16),
 
-            // --------- List items ----------
             _ProfileListTile(
               title: 'Courses taken',
               trailingText: '30/5 this semester',
@@ -283,7 +259,6 @@ class ProfileScreen extends StatelessWidget {
                 Navigator.pushNamed(context, Routes.coursesHistory);
               },
             ),
-            // Buraya Friends Feed için Friends Activity rotası eklenebilir.
             _ProfileListTile(
               title: 'Friends feed',
               trailingIcon: Icons.chevron_right,
@@ -300,7 +275,6 @@ class ProfileScreen extends StatelessWidget {
               trailingText: '15',
             ),
 
-            // Course Planner – arkadaşının ekranına gider
             _ProfileListTile(
               title: 'Course Planner',
               trailingIcon: Icons.chevron_right,
@@ -330,7 +304,6 @@ class ProfileScreen extends StatelessWidget {
   }
 }
 
-/// ================== APP BAR TAB WIDGETLARI ==================
 class _TabItem extends StatelessWidget {
   final String label;
   final bool selected;
@@ -375,7 +348,6 @@ class _TabDivider extends StatelessWidget {
   }
 }
 
-/// ================== RECENT COURSE CARD ==================
 
 class _RecentCourseCard extends StatelessWidget {
   final String imagePath;
@@ -399,7 +371,6 @@ class _RecentCourseCard extends StatelessWidget {
   }
 }
 
-/// ================== HISTOGRAM ==================
 
 class RatingsHistogram extends StatelessWidget {
   final List<double> values;
@@ -474,7 +445,6 @@ class _HistogramRatingRow extends StatelessWidget {
   }
 }
 
-/// ================== LIST TILE ==================
 
 class _ProfileListTile extends StatelessWidget {
   final String title;
