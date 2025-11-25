@@ -163,9 +163,6 @@ class _ReviewsScreenState extends State<ReviewsScreen> {
       case 1:
         targetRoute = Routes.search; // Search (Courses)
         break;
-      case 2:
-        targetRoute = Routes.addReview; // Search (Courses)
-
       case 3:
         targetRoute = Routes.friendsActivity; // Friends Activity
         break;
@@ -790,4 +787,5 @@ class _AddReviewScreenState extends State<AddReviewScreen> {
   }
 
 }
+
 
