@@ -68,7 +68,7 @@ const List<CourseMeta> _courses = [
 
 
 class ReviewsScreen extends StatefulWidget {
-  // ⭐️ Yeni Route Adı (Routes sınıfına eklenmeli)
+  
   static const routeName = '/reviews';
   const ReviewsScreen({super.key});
 
@@ -790,3 +790,4 @@ class _AddReviewScreenState extends State<AddReviewScreen> {
   }
 
 }
+
