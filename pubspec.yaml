@@ -1,4 +1,4 @@
-name: dart_trial
+name: suboxd
 description: "A new Flutter project."
 # The following line prevents the package from being accidentally published to
 # pub.dev using `flutter pub publish`. This is preferred for private packages.
@@ -38,7 +38,27 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  flutter_launcher_icons: "^0.13.1" # En son sürümü kontrol edin
 
+# flutter_launcher_icons yapılandırması (bu da pubspec.yaml içinde olmalı)
+flutter_launcher_icons:
+  android: "launcher_icon" # Android için true veya ikon adı
+  ios: true # iOS için true veya ikon adı
+  image_path: "assets/app_logo.png" # İkon dosyanızın yolu
+  min_sdk_android: 21 # varsayılan olarak 21, minSdkVersion'ınızdan yüksekse değiştirin
+  remove_alpha_ios: true # iOS'ta transparan alanı kaldırmak için (genellikle true)
+  web:
+    generate: true
+    image_path: "assets/app_logo.png"
+    background_color: "#hexcode" # Web için arka plan rengi (isteğe bağlı)
+    theme_color: "#hexcode" # Web için tema rengi (isteğe bağlı)
+  windows:
+    generate: true
+    image_path: "assets/app_logo.png"
+    icon_size: 48 # Windows için ikon boyutu (örnek)
+  macos:
+    generate: true
+    image_path: "assets/app_logo.png"
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is
   # activated in the `analysis_options.yaml` file located at the root of your
@@ -56,20 +76,9 @@ flutter:
   # included with your application, so that you can use the icons in
   # the material Icons class.
   uses-material-design: true
+
   assets:
-    - assets/logo.png
-    - assets/icons/
-    - assets/courses/
-  fonts:
-    - family: Inter
-      fonts:
-        - asset: assets/fonts/Inter/Inter-VariableFont_opsz,wght.ttf
-        - asset: assets/fonts/Inter/Inter-Italic-VariableFont_opsz,wght.ttf
-          style: italic
-
-
-
-
+    - assets/
   # To add assets to your application, add an assets section, like this:
   # assets:
   #   - images/a_dot_burr.jpeg
