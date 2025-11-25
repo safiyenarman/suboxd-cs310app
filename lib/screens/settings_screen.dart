@@ -33,7 +33,6 @@ class _SettingsScreenState extends State<SettingsScreen> {
       body: SafeArea(
         child: Column(
           children: [
-            // Top Bar
             Container(
               color: cardColor,
               child: Padding(
@@ -55,7 +54,6 @@ class _SettingsScreenState extends State<SettingsScreen> {
                     ),
                     TextButton(
                       onPressed: () {
-                        // TODO: Save changes
                         Navigator.pop(context);
                       },
                       child: const Text(
@@ -75,7 +73,6 @@ class _SettingsScreenState extends State<SettingsScreen> {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    // Signed in section
                     Container(
                       padding: const EdgeInsets.all(16),
                       decoration: BoxDecoration(
