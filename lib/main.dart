@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 import 'routes.dart';
-// ProfileScreen.routeName hala kullanıldığı için import yerinde kalmalı
 import 'screens/profile_screen.dart';
 
 void main() {
@@ -20,10 +19,9 @@ class SUboxdApp extends StatelessWidget {
         scaffoldBackgroundColor: const Color(0xFF1E2229),
       ),
 
-      // UYGULAMA AÇILDIĞINDA İLK AÇILACAK EKRAN (SplashScreen olarak ayarlandı)
-      initialRoute: Routes.splash, // '/profile' yerine '/'
+      
+      initialRoute: Routes.splash, 
 
-      // Tüm route'lar tek yerden geliyor
       routes: Routes.getRoutes(),
     );
   }
