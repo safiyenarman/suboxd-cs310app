@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:suboxd/screens/add_review_screen.dart';
 import '../routes.dart';
-import 'profile_screen.dart'; // ProfileScreen'e gitmek için import edildi
+import 'profile_screen.dart';
 
 const Color bg = Color(0xFF1E2229);
 const Color cardColor = Color(0xFF262B33);
@@ -88,34 +88,26 @@ class _SearchScreenState extends State<SearchScreen> {
           icon: Icon(Icons.add_circle, color: Colors.greenAccent),
           label: '',
         ),
-        // Index 3: Friends Activity
         BottomNavigationBarItem(icon: Icon(Icons.flash_on_outlined), label: ''),
-        // Index 4: Profile
         BottomNavigationBarItem(icon: Icon(Icons.person_outline), label: ''),
       ],
       onTap: (index) {
-        // Alt Bar Navigasyonları güncellendi
         switch (index) {
           case 0:
-          // Home sayfasına git ve geri yığınını temizle
             Navigator.pushNamedAndRemoveUntil(context, Routes.home, (route) => false);
             break;
           case 1:
-          // Search zaten burası
             break;
           case 2:
             Navigator.pushNamed(context, AddReviewScreen.routeName);
             break;
           case 3:
-          // Friends Activity ekranına git (Flash ikonu)
             Navigator.pushNamedAndRemoveUntil(context, Routes.friendsActivity, (route) => false);
             break;
           case 4:
-          // Profile ekranına git
             Navigator.pushNamedAndRemoveUntil(context, ProfileScreen.routeName, (route) => false);
             break;
           default:
-          // Diğer ikonlar için şimdilik bir şey yapılmadı (Index 2)
             break;
         }
       },
@@ -157,7 +149,6 @@ class _SearchScreenState extends State<SearchScreen> {
                   GestureDetector(
                     onTap: () {
                       _searchController.clear();
-                      // Home sayfasına git ve tüm navigasyon yığınını temizle.
                       Navigator.pushNamedAndRemoveUntil(
                           context, Routes.home, (route) => false);
                     },
@@ -279,4 +270,5 @@ class _CourseListTile extends StatelessWidget {
       ),
     );
   }
+
 }
