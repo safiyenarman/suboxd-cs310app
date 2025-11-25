@@ -64,7 +64,7 @@ class _AddReviewScreenState extends State<AddReviewScreen> {
         title: const Text('Add Review'),
         backgroundColor: const Color(0xFF15181E), 
 
-        .
+        
         leading: IconButton(
           icon: const Icon(Icons.close, color: Colors.white),
           onPressed: () {
