@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "630220319538",
+    "project_id": "suboxd-cs310",
+    "storage_bucket": "suboxd-cs310.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:630220319538:android:6e769f1fca0591d59bc52b",
+        "android_client_info": {
+          "package_name": "com.example.suboxd"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA_iUuxA3J1R5e017kQhiIofnEujqMx4FM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:630220319538:android:55c86630f5ae76ad9bc52b",
+        "android_client_info": {
+          "package_name": "com.example.suboxddd"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA_iUuxA3J1R5e017kQhiIofnEujqMx4FM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
