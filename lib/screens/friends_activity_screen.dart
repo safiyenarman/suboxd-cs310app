@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:suboxd/screens/add_review_screen.dart';
 import 'package:suboxd/screens/add_review_screen.dart';
-import '../routes.dart'; // Rota sabitleri için
-import 'profile_screen.dart'; // ProfileScreen.routeName için
+import '../routes.dart'; 
+import 'profile_screen.dart'; 
 
-// Diğer ekranlarla uyumlu renk sabitleri eklendi
+
 const Color primaryColor = Color(0xFF4B8BF4);
 const Color bottomBarColor = Color(0xFF485365);
 
 class FriendsActivityScreen extends StatelessWidget {
-  static const routeName = '/friends-activity'; // Rota ismi eklendi
+  static const routeName = '/friends-activity'; 
 
   const FriendsActivityScreen({super.key});
 
@@ -37,7 +37,7 @@ class FriendsActivityScreen extends StatelessWidget {
           );
         },
       ),
-      bottomNavigationBar: _BottomNavBar(), // Güncellenmiş BottomNavBar kullanıldı
+      bottomNavigationBar: _BottomNavBar(), 
     );
   }
 
@@ -55,7 +55,7 @@ class FriendsActivityScreen extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          // ÜSTTE KURS GÖRSELİ
+          
           ClipRRect(
             borderRadius: const BorderRadius.vertical(top: Radius.circular(12)),
             child: Image.asset(
@@ -67,7 +67,7 @@ class FriendsActivityScreen extends StatelessWidget {
           ),
           const SizedBox(height: 8),
 
-          // KURS ADI
+          
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 8),
             child: Text(
@@ -83,7 +83,7 @@ class FriendsActivityScreen extends StatelessWidget {
           ),
           const SizedBox(height: 4),
 
-          // KULLANICI ADI
+          
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 8),
             child: Row(
@@ -99,7 +99,7 @@ class FriendsActivityScreen extends StatelessWidget {
           ),
           const SizedBox(height: 4),
 
-          // YILDIZLAR
+         
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 8),
             child: Row(
@@ -119,7 +119,7 @@ class FriendsActivityScreen extends StatelessWidget {
   }
 }
 
-// ---- ORTAK KULLANILAN BOTTOM NAV BAR (Önceki ekranlarla aynı) ----
+
 class _BottomNavBar extends StatelessWidget {
   const _BottomNavBar();
 
@@ -128,37 +128,37 @@ class _BottomNavBar extends StatelessWidget {
     return BottomNavigationBar(
       backgroundColor: bottomBarColor,
       type: BottomNavigationBarType.fixed,
-      currentIndex: 3, // Friends Activity (Flash ikonu) Index 3
+      currentIndex: 3, 
       selectedItemColor: primaryColor,
       unselectedItemColor: Colors.grey,
       items: const [
-        // Index 0: Home
+       
         BottomNavigationBarItem(icon: Icon(Icons.home_outlined), label: ''),
-        // Index 1: Search
+     
         BottomNavigationBarItem(icon: Icon(Icons.search), label: ''),
-        // Index 2: Add
+       
         BottomNavigationBarItem(
           icon: Icon(Icons.add_circle, color: Colors.greenAccent),
           label: '',
         ),
-        // Index 3: Friends Activity (Seçili)
+       
         BottomNavigationBarItem(icon: Icon(Icons.flash_on_outlined), label: ''),
-        // Index 4: Profile
+       
         BottomNavigationBarItem(icon: Icon(Icons.person_outline), label: ''),
       ],
       onTap: (index) {
-        // Alt Bar Navigasyonları (Main ekranlar arası geçişte stack temizlenir)
+       
         switch (index) {
           case 0:
-          // Home
+        
             Navigator.pushNamedAndRemoveUntil(context, Routes.home, (route) => false);
             break;
           case 1:
-          // Search
+         
             Navigator.pushNamedAndRemoveUntil(context, Routes.search, (route) => false);
             break;
           case 2:
-          // ⭐️ DÜZELTİLEN KISIM: Yalnızca mevcut stack'in üzerine ekle (Geri dönüşü sağlar)
+          
             Navigator.pushNamed(context, AddReviewScreen.routeName);
             break;
           case 4:
@@ -177,7 +177,7 @@ class _BottomNavBar extends StatelessWidget {
 }
 
 
-// Arkadaşının kullandığı dummy veriler (Asset yolları düzeltildi)
+
 final courseImages = [
   "assets/cs204.png",
   "assets/cs303.png",
