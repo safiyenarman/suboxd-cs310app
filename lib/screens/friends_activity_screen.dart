@@ -166,7 +166,7 @@ class _BottomNavBar extends StatelessWidget {
             Navigator.pushNamedAndRemoveUntil(context, ProfileScreen.routeName, (route) => false);
             break;
           case 3:
-          // Friends Activity (Zaten buradayız)
+          // Friends Activity 
             break;
           default:
             break;
