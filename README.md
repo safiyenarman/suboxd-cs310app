@@ -32,4 +32,13 @@ By promoting knowledge sharing and community interaction, the platform transform
 | 32523       | Sena Toker         | Presentation & Communication Lead |
 | 30601       | Ceren Lale         | Learning & Research Lead |
 
+Note: All of our final working codes are in a folder called "finalcodes"!
 
+Testing
+The project includes both Unit Tests and Widget Tests to ensure data integrity and UI consistency. You can run these tests by executing flutter test in your terminal.
+
+Unit Tests
+The unit tests, located in course_model_test.dart, verify the core logic of the CourseModel and CourseSession classes. Specifically, these tests ensure that raw data is correctly normalized, such as converting lowercase days to capitalized formats (e.g., "monday" to "Monday") and fixing time separators (e.g., "14.30" to "14:30"). Additionally, the tests validate the fromDoc factory method to ensure that full course documents, including instructor details and session lists, are correctly parsed into usable Dart objects.
+
+Widget Tests
+The widget tests, found in widget_test.dart, focus on the visual reliability of the user interface. The primary test validates the TestCourseCard component by injecting it into a test environment and checking for the presence of an Image widget. It further confirms that the widget is loading the correct asset by verifying that the internal AssetImage path matches the expected testImagePath provided during initialization.
